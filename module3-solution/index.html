@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Narrow Down Your Menu Choice</title>
+  </head>
+  <body>
+    <h1>Narrow Down Your Menu Choice</h1>
 
+    <!-- LIST #1 - unlimited items -->
+    <div id="list" ng-controller='NarrowItDownAppController as list' class="form-group">
+      <input type="text" ng-model="list.searchterm" placeholder="Search menu" class="form-control">
+      <button ng-click="list.searchItem();">Narrow It Down For Me!</button>
+      <span>{{ list.lastRemoved }}</span>
+
+      <shopping-list
+        items="list.items"
+        title="{{list.title}}"
+        on-remove="list.removeItem(index)"></shopping-list>
+
+    </div>
+
+  </body>
+</html>

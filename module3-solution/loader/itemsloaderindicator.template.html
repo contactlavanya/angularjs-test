@@ -1,0 +1,16 @@
+<!-- <div class="loader">
+  <ul>
+    <li ng-repeat="menu_item in menu.menu_items">
+      {{ menu_item.short_name }}----{{ menu_item.name }}----{{ menu_item.description }}
+      <a href="" ng-click="menu.onRemove({index: $index});">
+      Don't want this one!</a>
+    </li>
+  </ul>
+</div>
+<div class="error" ng-transclude></div> -->
+
+
+<li>
+  <list-item-description></list-item-description>
+  <button ng-click="list.removeItem($index);">Remove Item</button>
+</li>
