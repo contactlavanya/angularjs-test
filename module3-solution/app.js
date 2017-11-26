@@ -10,7 +10,7 @@ angular.module('NarrowItDownApp', [])
 
 function NarrowItDownAppDirective() {
   var ddo = {
-    templateUrl: '/loader/listitem.html',
+    templateUrl: '../loader/listitem.html',
     scope: {
       items: '<',
       myTitle: '@title',
